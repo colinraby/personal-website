@@ -5,7 +5,6 @@ import { useRef, useState } from "react";
 import {
   Newspaper,
   Video,
-  Radio,
   ExternalLink,
   Play,
   Filter,
@@ -13,18 +12,16 @@ import {
 import { newsItems } from "@/data/site-data";
 import { cn } from "@/lib/utils";
 
-type NewsType = "all" | "article" | "video" | "radio";
+type NewsType = "all" | "article" | "video";
 
 const typeIcons: Record<string, React.ReactNode> = {
   article: <Newspaper className="w-5 h-5" />,
   video: <Video className="w-5 h-5" />,
-  radio: <Radio className="w-5 h-5" />,
 };
 
 const typeColors: Record<string, string> = {
   article: "bg-neon-blue/10 text-neon-blue",
   video: "bg-neon-purple/10 text-neon-purple",
-  radio: "bg-neon-green/10 text-neon-green",
 };
 
 const containerVariants = {
@@ -63,7 +60,6 @@ export function News() {
     { value: "all", label: "All" },
     { value: "article", label: "Articles" },
     { value: "video", label: "Video" },
-    { value: "radio", label: "Radio/Podcast" },
   ];
 
   return (
@@ -129,13 +125,6 @@ export function News() {
                       </div>
                     </div>
                   )}
-                  {item.type === "radio" && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-neon-green/20 flex items-center justify-center">
-                        <Radio className="w-8 h-8 text-neon-green" />
-                      </div>
-                    </div>
-                  )}
                   {item.type === "article" && (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Newspaper className="w-12 h-12 text-muted-foreground/50" />
@@ -186,7 +175,6 @@ export function News() {
                   <div className="flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all">
                     {item.type === "article" && "Read Article"}
                     {item.type === "video" && "Watch Video"}
-                    {item.type === "radio" && "Listen Now"}
                     <ExternalLink className="w-4 h-4" />
                   </div>
                 </div>

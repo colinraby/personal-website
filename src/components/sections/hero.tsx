@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import { ChevronDown, Linkedin, ExternalLink } from "lucide-react";
 import { ParticleBackground } from "@/components/ui/particle-background";
 import { siteConfig } from "@/data/site-data";
@@ -29,34 +28,33 @@ const itemVariants = {
   },
 };
 
-// Typewriter hook
-function useTypewriter(text: string, speed: number = 80, delay: number = 0) {
-  const [displayedText, setDisplayedText] = useState("");
-  const [isComplete, setIsComplete] = useState(false);
+// Animated text component for smooth letter-by-letter reveal
+function AnimatedName({ text, delay = 0.5 }: { text: string; delay?: number }) {
+  const letters = text.split("");
 
-  useEffect(() => {
-    setDisplayedText("");
-    setIsComplete(false);
-
-    const startTimeout = setTimeout(() => {
-      let currentIndex = 0;
-      const interval = setInterval(() => {
-        if (currentIndex < text.length) {
-          setDisplayedText(text.slice(0, currentIndex + 1));
-          currentIndex++;
-        } else {
-          setIsComplete(true);
-          clearInterval(interval);
-        }
-      }, speed);
-
-      return () => clearInterval(interval);
-    }, delay);
-
-    return () => clearTimeout(startTimeout);
-  }, [text, speed, delay]);
-
-  return { displayedText, isComplete };
+  return (
+    <span className="inline-block">
+      {letters.map((letter, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.3,
+            delay: delay + index * 0.06,
+            ease: [0.25, 0.4, 0.25, 1],
+          }}
+          className="inline-block"
+          style={{
+            // Preserve space character width
+            minWidth: letter === " " ? "0.3em" : undefined
+          }}
+        >
+          {letter === " " ? "\u00A0" : letter}
+        </motion.span>
+      ))}
+    </span>
+  );
 }
 
 // Current roles (primary)
@@ -76,9 +74,6 @@ const emeritusRoles = [
 ];
 
 export function Hero() {
-  const name = "COLIN RABY";
-  const { displayedText: displayedName, isComplete: nameComplete } = useTypewriter(name, 100, 500);
-
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -105,25 +100,15 @@ export function Hero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Typewriter name */}
-        <motion.h1
-          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6 min-h-[1.2em]"
-          variants={itemVariants}
+        {/* Animated name */}
+        <h1
+          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6"
         >
           <span className="sr-only">Colin Raby</span>
-          <span aria-hidden="true" className="text-gradient inline-block">
-            {displayedName}
-            <motion.span
-              className="inline-block w-[3px] sm:w-[4px] h-[0.9em] bg-neon-cyan ml-1 align-middle"
-              animate={{ opacity: nameComplete ? [1, 0] : 1 }}
-              transition={{
-                duration: 0.5,
-                repeat: nameComplete ? Infinity : 0,
-                repeatType: "reverse",
-              }}
-            />
+          <span aria-hidden="true" className="text-gradient">
+            <AnimatedName text="COLIN RABY" delay={0.3} />
           </span>
-        </motion.h1>
+        </h1>
 
         {/* Primary roles */}
         <motion.div
@@ -136,7 +121,7 @@ export function Hero() {
                 key={role}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2 + index * 0.15, duration: 0.4 }}
+                transition={{ delay: 1.2 + index * 0.15, duration: 0.4 }}
                 className="text-foreground"
               >
                 {role}
@@ -156,7 +141,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.8, duration: 0.5 }}
+            transition={{ delay: 2, duration: 0.5 }}
             className="text-sm sm:text-base text-muted-foreground"
           >
             <span className="text-neon-cyan font-medium">Emeritus:</span>{" "}
@@ -241,7 +226,7 @@ export function Hero() {
         onClick={scrollToAbout}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 3.5, duration: 0.5 }}
+        transition={{ delay: 2.5, duration: 0.5 }}
         aria-label="Scroll to About section"
       >
         <span className="text-xs uppercase tracking-widest">Scroll</span>
