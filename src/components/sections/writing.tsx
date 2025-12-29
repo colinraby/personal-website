@@ -27,34 +27,79 @@ const itemVariants = {
   },
 };
 
-// Placeholder blog posts - these would ideally come from RSS feeds or a CMS
 const personalBlogPosts = [
   {
-    title: "The Future of AI in Government",
-    excerpt: "Exploring how artificial intelligence is transforming the way government operates and serves citizens.",
-    date: "Coming Soon",
+    title: "Adapting Educational Institutions to the AI Age",
+    excerpt: "How schools and universities need to evolve their teaching methods and curricula in response to AI advancements.",
+    date: "2024",
     readTime: "5 min read",
+    url: "https://colinraby.substack.com/p/adapting-educational-institutions",
   },
   {
-    title: "Lessons from Building a Startup in College",
-    excerpt: "What I learned founding FarmMind while completing my engineering degree at LSU.",
-    date: "Coming Soon",
-    readTime: "7 min read",
+    title: "What the Mississippi Miracle Foreshadows",
+    excerpt: "Lessons from Mississippi's educational transformation and what it means for the future.",
+    date: "2024",
+    readTime: "5 min read",
+    url: "https://colinraby.substack.com/p/what-the-mississippi-miracle-foreshadows",
+  },
+  {
+    title: "The Last 20 Percent is the Moat",
+    excerpt: "Why the final stretch of any project is often what separates success from mediocrity.",
+    date: "2024",
+    readTime: "4 min read",
+    url: "https://colinraby.substack.com/p/the-last-20-percent-is-the-moat",
+  },
+  {
+    title: "Artificial Intelligence Marks a New Age for Humanity",
+    excerpt: "Exploring the transformative potential of AI and what it means for our future.",
+    date: "2023",
+    readTime: "5 min read",
+    url: "https://colinraby.substack.com/p/letter-to-the-editor-artificial-intelligence",
+  },
+  {
+    title: "PressClips.org is Live",
+    excerpt: "Announcing the launch of PressClips.org - a new tool for tracking media coverage.",
+    date: "2024",
+    readTime: "3 min read",
+    url: "https://colinraby.substack.com/p/pressclipsorg-is-live-httpspressclipsorg",
   },
 ];
 
 const farmmindBlogPosts = [
   {
-    title: "How AI is Revolutionizing Agriculture",
-    excerpt: "Discover how modern AI technologies are helping farmers make better decisions and improve yields.",
-    date: "Coming Soon",
-    readTime: "6 min read",
+    title: "FarmMind AI Model Helps Correct Official Ag Guide (Part 2)",
+    excerpt: "Continuing our exploration of how FarmMind's AI detected and helped correct errors in official agricultural guides.",
+    date: "2024",
+    readTime: "5 min read",
+    url: "https://farmmind.org/blogs/farmmind-ai-model-helps-correct-official-ag-guide-part-2",
   },
   {
-    title: "Getting Started with FarmMind",
-    excerpt: "A complete guide to using FarmMind's AI-powered agricultural consulting platform.",
-    date: "Coming Soon",
+    title: "FarmMind AI Detects Errors in Official LSU Ag Guide",
+    excerpt: "How FarmMind's AI model detected errors and helped correct official LSU agricultural recommendations, showcasing potential to verify research nationwide.",
+    date: "2024",
+    readTime: "6 min read",
+    url: "https://farmmind.org/blogs/farmmind-ai-model-detects-errors-and-helps-correct-official-lsu-ag-guide,-showcasing-potential-to-verify-research-recommendations-nationwide",
+  },
+  {
+    title: "FarmMind.org: The Platform for Agricultural Intelligence",
+    excerpt: "Introducing FarmMind.org - helping everyone farm smarter with AI-powered agricultural consulting.",
+    date: "2024",
     readTime: "4 min read",
+    url: "https://farmmind.org/blogs/farmmind.org-is-the-platform-for-agricultural-intelligence-helping-everyone-farm-smarter",
+  },
+  {
+    title: "FarmMind Platform Overview",
+    excerpt: "A comprehensive overview of the FarmMind platform and its capabilities for farmers and agricultural professionals.",
+    date: "2024",
+    readTime: "5 min read",
+    url: "https://farmmind.org/blogs/farmmind-platform-overview",
+  },
+  {
+    title: "FarmSmarter.ai Honored on Inaugural Silicon Bayou List",
+    excerpt: "FarmSmarter.ai recognized on the inaugural Silicon Bayou list celebrating Louisiana's tech innovation.",
+    date: "2024",
+    readTime: "3 min read",
+    url: "https://farmmind.org/blogs/farmsmarter.ai-honored-on-inagural-silicon-bayou-list",
   },
 ];
 
@@ -110,9 +155,12 @@ export function Writing() {
 
               <div className="space-y-4">
                 {personalBlogPosts.map((post, index) => (
-                  <motion.div
+                  <motion.a
                     key={index}
-                    className="glass-card rounded-xl p-5 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                    href={post.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block glass-card rounded-xl p-5 hover:shadow-lg transition-all duration-300 group"
                     whileHover={{ scale: 1.01, x: 4 }}
                   >
                     <div className="flex items-start justify-between gap-4">
@@ -131,7 +179,7 @@ export function Writing() {
                       </div>
                       <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all flex-shrink-0" />
                     </div>
-                  </motion.div>
+                  </motion.a>
                 ))}
               </div>
 
@@ -185,7 +233,7 @@ export function Writing() {
                 {farmmindBlogPosts.map((post, index) => (
                   <motion.a
                     key={index}
-                    href={siteConfig.links.farmmindBlog}
+                    href={post.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block glass-card rounded-xl p-5 hover:shadow-lg transition-all duration-300 group"

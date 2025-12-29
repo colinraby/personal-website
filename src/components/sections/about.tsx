@@ -80,8 +80,8 @@ export function About() {
                     <Briefcase className="w-5 h-5 text-neon-cyan" />
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground">Current Role</p>
-                    <p className="text-sm font-medium">Congressional AI</p>
+                    <p className="text-xs text-muted-foreground">Former Role</p>
+                    <p className="text-sm font-medium">Congressional AI Specialist</p>
                   </div>
                 </div>
 
@@ -91,7 +91,7 @@ export function About() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">Company</p>
-                    <p className="text-sm font-medium">CEO, FarmMind</p>
+                    <p className="text-sm font-medium">CEO, FarmMind Inc</p>
                   </div>
                 </div>
 
@@ -101,7 +101,7 @@ export function About() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">Education</p>
-                    <p className="text-sm font-medium">LSU '24</p>
+                    <p className="text-sm font-medium">LSU Honors '24</p>
                   </div>
                 </div>
 
@@ -111,7 +111,7 @@ export function About() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">Location</p>
-                    <p className="text-sm font-medium">Washington, D.C.</p>
+                    <p className="text-sm font-medium">Baton Rouge and Washington, D.C.</p>
                   </div>
                 </div>
               </div>

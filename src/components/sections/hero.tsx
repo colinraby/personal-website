@@ -206,16 +206,16 @@ export function Hero() {
           className="mt-16 flex flex-wrap justify-center gap-8 sm:gap-12 text-muted-foreground"
         >
           <div className="text-center">
-            <p className="text-2xl sm:text-3xl font-bold text-gradient">$95K+</p>
-            <p className="text-sm">Prize Funding Won</p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl sm:text-3xl font-bold text-gradient">2x</p>
-            <p className="text-sm">National Champion</p>
-          </div>
-          <div className="text-center">
             <p className="text-2xl sm:text-3xl font-bold text-gradient">First</p>
             <p className="text-sm">Congressional AI Specialist</p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl sm:text-3xl font-bold text-gradient">2x Champion</p>
+            <p className="text-sm">National AAEA Quizbowl</p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl sm:text-3xl font-bold text-gradient">Aspiring</p>
+            <p className="text-sm">Polymath</p>
           </div>
         </motion.div>
       </motion.div>

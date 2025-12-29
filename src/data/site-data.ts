@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Colin Raby",
   title: "Colin Raby | CEO of FarmMind | AI Builder | Entrepreneur",
   description: "CEO of FarmMind, former Congressional AI Specialist, and AI entrepreneur. Building the future of AI in agriculture.",
-  tagline: "Building the Future of AI in Agriculture",
+  tagline: "Building the Future",
   url: "https://colinraby.com", // Update when domain is purchased
   links: {
     linkedin: "https://www.linkedin.com/in/colin-raby-6266a5191/",
