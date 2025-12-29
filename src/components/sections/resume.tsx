@@ -140,7 +140,7 @@ export function Resume() {
           >
             <motion.a
               href="/resume.pdf"
-              download
+              download="Colin Raby Resume 12-29-2025.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg transition-all"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

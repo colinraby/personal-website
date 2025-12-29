@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronDown, Award, Briefcase, GraduationCap, MapPin } from "lucide-react";
+import Image from "next/image";
 import { aboutContent } from "@/data/site-data";
 import { cn } from "@/lib/utils";
 
@@ -59,14 +60,17 @@ export function About() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left column - Image and quick stats */}
             <motion.div variants={itemVariants} className="space-y-8">
-              {/* Profile image placeholder */}
+              {/* Profile image */}
               <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/20 via-neon-purple/20 to-neon-blue/20 rounded-2xl" />
                 <div className="absolute inset-2 bg-card rounded-xl overflow-hidden">
-                  {/* Placeholder for actual image */}
-                  <div className="w-full h-full bg-gradient-to-br from-secondary to-muted flex items-center justify-center">
-                    <span className="text-6xl font-bold text-gradient opacity-30">CR</span>
-                  </div>
+                  <Image
+                    src="/colin-raby.jpg"
+                    alt="Colin Raby"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-neon-cyan/10 rounded-full blur-2xl" />

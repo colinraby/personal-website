@@ -8,6 +8,7 @@ import {
   ExternalLink,
   Play,
   Filter,
+  ChevronDown,
 } from "lucide-react";
 import { newsItems } from "@/data/site-data";
 import { cn } from "@/lib/utils";
@@ -46,15 +47,21 @@ const itemVariants = {
   },
 };
 
+const INITIAL_ITEMS = 9; // 3 rows × 3 columns
+
 export function News() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [filter, setFilter] = useState<NewsType>("all");
+  const [showAll, setShowAll] = useState(false);
 
   const filteredNews =
     filter === "all"
       ? newsItems
       : newsItems.filter((item) => item.type === filter);
+
+  const displayedNews = showAll ? filteredNews : filteredNews.slice(0, INITIAL_ITEMS);
+  const hasMoreItems = filteredNews.length > INITIAL_ITEMS;
 
   const filterOptions: { value: NewsType; label: string }[] = [
     { value: "all", label: "All" },
@@ -88,7 +95,10 @@ export function News() {
             {filterOptions.map((option) => (
               <button
                 key={option.value}
-                onClick={() => setFilter(option.value)}
+                onClick={() => {
+                  setFilter(option.value);
+                  setShowAll(false);
+                }}
                 className={cn(
                   "px-4 py-2 rounded-full text-sm font-medium transition-all",
                   filter === option.value
@@ -106,14 +116,16 @@ export function News() {
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
             variants={containerVariants}
           >
-            {filteredNews.map((item, index) => (
+            {displayedNews.map((item, index) => (
               <motion.a
                 key={item.id}
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group glass-card rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300"
-                variants={itemVariants}
+                variants={index < INITIAL_ITEMS ? itemVariants : undefined}
+                initial={index >= INITIAL_ITEMS ? { opacity: 1, y: 0 } : undefined}
+                animate={index >= INITIAL_ITEMS ? { opacity: 1, y: 0 } : undefined}
                 whileHover={{ scale: 1.02, y: -4 }}
               >
                 {/* Thumbnail area */}
@@ -181,6 +193,42 @@ export function News() {
               </motion.a>
             ))}
           </motion.div>
+
+          {/* View More button */}
+          {hasMoreItems && !showAll && (
+            <motion.div
+              variants={itemVariants}
+              className="flex justify-center mt-10"
+            >
+              <motion.button
+                onClick={() => setShowAll(true)}
+                className="group flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card hover:border-primary/50 font-medium transition-all"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                View More ({filteredNews.length - INITIAL_ITEMS} more)
+                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+              </motion.button>
+            </motion.div>
+          )}
+
+          {/* Show Less button */}
+          {showAll && hasMoreItems && (
+            <motion.div
+              variants={itemVariants}
+              className="flex justify-center mt-10"
+            >
+              <motion.button
+                onClick={() => setShowAll(false)}
+                className="group flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card hover:border-primary/50 font-medium transition-all"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Show Less
+                <ChevronDown className="w-4 h-4 rotate-180 group-hover:-translate-y-0.5 transition-transform" />
+              </motion.button>
+            </motion.div>
+          )}
 
           {/* Empty state */}
           {filteredNews.length === 0 && (
