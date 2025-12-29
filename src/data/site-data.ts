@@ -2,9 +2,9 @@
 
 export const siteConfig = {
   name: "Colin Raby",
-  title: "Colin Raby | AI Innovator | Congressional AI Specialist | Entrepreneur",
-  description: "Congressional AI Specialist for Rep. Raja Krishnamoorthi and CEO of FarmMind. Building the future of AI from Capitol Hill to the farm field.",
-  tagline: "Building the Future of AI: From Capitol Hill to the Farm Field",
+  title: "Colin Raby | CEO of FarmMind | AI Builder | Entrepreneur",
+  description: "CEO of FarmMind, former Congressional AI Specialist, and AI entrepreneur. Building the future of AI in agriculture.",
+  tagline: "Building the Future of AI in Agriculture",
   url: "https://colinraby.com", // Update when domain is purchased
   links: {
     linkedin: "https://www.linkedin.com/in/colin-raby-6266a5191/",
@@ -12,9 +12,9 @@ export const siteConfig = {
     farmmindBlog: "https://farmmind.org/blogs/",
     github: "", // Add if available
     twitter: "", // Add if available
-    substack: "", // Add Substack URL
+    substack: "https://colinraby.substack.com/",
   },
-  email: "", // Add professional email
+  email: "rabycolin@gmail.com",
   location: "Washington, D.C.",
 };
 
@@ -39,10 +39,17 @@ export const timelineEvents = [
     category: "personal",
   },
   {
+    id: "eagle-scout",
+    year: "2019",
+    title: "Louisiana Eagle Scout of the Year",
+    description: "Recognized as Louisiana's Eagle Scout of the Year. Earned Order of the Arrow Vigil Honor for exceptional service to Scouting.",
+    category: "award",
+  },
+  {
     id: "lsu-start",
-    year: "2020",
+    year: "2019",
     title: "Started at LSU",
-    description: "Began studying Mechanical Engineering with minors in Aerospace Engineering and Economics at Louisiana State University.",
+    description: "Began studying Mechanical Engineering with minors in Aerospace Engineering and Economics at Louisiana State University Honors College.",
     category: "education",
   },
   {
@@ -51,6 +58,20 @@ export const timelineEvents = [
     title: "Tiger Twelve Recipient",
     description: "Selected as one of LSU's Tiger Twelve, recognizing outstanding student leadership and achievement.",
     category: "award",
+  },
+  {
+    id: "gov-fellow",
+    year: "2021",
+    title: "Louisiana Governor's Fellow",
+    description: "Selected as a Louisiana Governor's Fellow in the Office of Governor John Bel Edwards, working on state-level initiatives and policy.",
+    category: "career",
+  },
+  {
+    id: "nasa-intern",
+    year: "2022",
+    title: "NASA Marshall Space Flight Center Intern",
+    description: "Systems Engineering and Project Management intern at NASA MSFC. Worked on Nuclear Propulsion Program and supported RFP evaluation for Space Launch System (SLS).",
+    category: "career",
   },
   {
     id: "homecoming-1",
@@ -65,6 +86,13 @@ export const timelineEvents = [
     title: "AAEA Academic Bowl National Champion",
     description: "Won the American Agricultural Economics Association Academic Bowl national championship.",
     category: "award",
+  },
+  {
+    id: "enercon-intern",
+    year: "2023",
+    title: "Enercon Nuclear Services Intern",
+    description: "Performed digital I&C upgrades and control system replacement projects for nuclear power plants. Designed control logic and conducted testing.",
+    category: "career",
   },
   {
     id: "homecoming-2",
@@ -88,10 +116,17 @@ export const timelineEvents = [
     category: "entrepreneurship",
   },
   {
+    id: "lsu-ta",
+    year: "2024",
+    title: "Teaching Assistant - Applied LLM Systems",
+    description: "Teaching assistant for LSU Honors 3025, the university's inaugural large language model class. Guided students through LLM stack including agents, fine-tuning, and RAG.",
+    category: "education",
+  },
+  {
     id: "venture-challenge",
     year: "2024",
     title: "J. Terrell Brown Venture Challenge Winner",
-    description: "FarmMind won the J. Terrell Brown Venture Challenge at LSU, validating the business model and technology.",
+    description: "FarmMind won the $20,000 J. Terrell Brown Venture Challenge at LSU, validating the business model and technology.",
     category: "entrepreneurship",
   },
   {
@@ -105,8 +140,22 @@ export const timelineEvents = [
     id: "congressional-role",
     year: "2024",
     title: "Congressional AI Specialist",
-    description: "Became one of the nation's first Congressional AI Specialists, working with Rep. Raja Krishnamoorthi on AI policy.",
+    description: "Became one of the nation's first Congressional AI Specialists, working with Rep. Raja Krishnamoorthi on AI policy for House Committees including Select Committee on CCP, Space Science and Technology, and Energy and Commerce.",
     category: "career",
+  },
+  {
+    id: "pelican-cup",
+    year: "2025",
+    title: "Pelican Cup Winner - $50,000",
+    description: "FarmMind won the 2025 Pelican Cup, Louisiana's premier startup competition, securing $50,000 in prize funding.",
+    category: "entrepreneurship",
+  },
+  {
+    id: "nexus-cup",
+    year: "2025",
+    title: "Nexus Technology Cup Winner - $25,000",
+    description: "FarmMind won the Nexus 2025 Technology Cup, securing $25,000 in prize funding.",
+    category: "entrepreneurship",
   },
   {
     id: "farm-bureau-semifinalist",
@@ -116,10 +165,17 @@ export const timelineEvents = [
     category: "entrepreneurship",
   },
   {
+    id: "farmmind-ceo",
+    year: "2025",
+    title: "CEO of FarmMind Inc.",
+    description: "Transitioned to full-time CEO of FarmMind Inc., leading the company's growth and product development as an AI-powered agricultural consulting platform.",
+    category: "entrepreneurship",
+  },
+  {
     id: "future",
     year: "Future",
     title: "What's Next",
-    description: "Continuing to shape AI policy, grow FarmMind, and build solutions that make technology accessible and impactful.",
+    description: "Continuing to grow FarmMind, advance AI in agriculture, and build solutions that make technology accessible and impactful.",
     category: "future",
   },
 ];
@@ -134,8 +190,10 @@ export const projects = [
     solution: "FarmMind leverages advanced AI to provide instant, expert-level agricultural guidance. Users can upload photos for plant/weed identification, get personalized recommendations based on their location and conditions, and access research-backed insights with full citations.",
     technologies: ["AI/ML", "Agentic AI", "Computer Vision", "LLMs", "React", "Node.js"],
     impact: [
+      "2025 Pelican Cup Winner - $50,000",
+      "Nexus 2025 Technology Cup Winner - $25,000",
       "Top-10 Semi-Finalist in American Farm Bureau 2026 Ag Innovation Challenge",
-      "Winner of J. Terrell Brown Venture Challenge at LSU",
+      "Winner of J. Terrell Brown Venture Challenge - $20,000",
       "Featured in multiple publications including LSU, Business Report, Farm Bureau News",
     ],
     links: {
@@ -163,6 +221,38 @@ export const projects = [
 ];
 
 export const newsItems = [
+  // 2025
+  {
+    id: "farm-bureau-finalist",
+    type: "article" as const,
+    title: "FarmSmarter Selected Top 4 in Ag Innovation Challenge, Compete for $100K",
+    publication: "American Farm Bureau Federation",
+    date: "2025",
+    excerpt: "FarmMind advances to final round of the national Ag Innovation Challenge.",
+    url: "https://www.fb.org/news-release/ag-innovation-challenge-finalists-compete-for-100k",
+    tags: ["FarmMind", "Award"],
+  },
+  {
+    id: "future-focus-trump-ai",
+    type: "video" as const,
+    title: "FUTURE IN FOCUS: Trump's $500 billion investment in AI",
+    publication: "Local News Live",
+    date: "2025",
+    excerpt: "News interview discussing the implications of major AI investments.",
+    url: "https://www.localnewslive.com/video/2025/01/25/future-focus-trumps-500-billion-investment-ai/",
+    tags: ["AI Policy", "Interview"],
+  },
+  // 2024
+  {
+    id: "business-spotlight",
+    type: "video" as const,
+    title: "FARM MIND: AI FOR MODERN AGRICULTURE | With Colin Raby | The Business Spotlight",
+    publication: "The Business Spotlight",
+    date: "2024",
+    excerpt: "In-depth interview about FarmMind and AI in modern agriculture.",
+    url: "https://www.youtube.com/watch?v=Mm_rROUY65Y",
+    tags: ["FarmMind", "Interview"],
+  },
   {
     id: "lsu-ai-dc",
     type: "article" as const,
@@ -170,88 +260,28 @@ export const newsItems = [
     publication: "LSU",
     date: "2024",
     excerpt: "Colin Raby is among the nation's first congressional AI specialists, working with Rep. Raja Krishnamoorthi.",
-    url: "#", // Add actual URL
+    url: "https://www.lsu.edu/blog/2024/08/26-raby-ai-congress.php",
     tags: ["AI Policy", "Congressional"],
+  },
+  {
+    id: "talk-radio",
+    type: "video" as const,
+    title: "FarmMind on the Talk 107.3 Morning show with Brian Haldane: AI in Farming Explained",
+    publication: "Talk 107.3FM",
+    date: "2024",
+    excerpt: "Radio interview discussing FarmMind and the intersection of AI and agriculture.",
+    url: "https://www.youtube.com/watch?v=2gMMEOtyOT4&feature=youtu.be",
+    tags: ["FarmMind", "Interview"],
   },
   {
     id: "lsu-farmmind",
     type: "article" as const,
     title: "Meet Colin Raby: First to Create an Agricultural Consultant With AI",
-    publication: "LSU",
+    publication: "LSU Working for Louisiana",
     date: "2024",
     excerpt: "LSU student develops revolutionary AI-powered agricultural consulting platform.",
-    url: "#", // Add actual URL
+    url: "https://www.lsu.edu/working-for-louisiana/news/2024/10-first-farmsmart.php",
     tags: ["FarmMind", "AI", "Agriculture"],
-  },
-  {
-    id: "lsu-farmsmart",
-    type: "article" as const,
-    title: "LSU Student Team's FarmSmart App Helps Farmers Manage Crops, Weeds With AI",
-    publication: "LSU Media Center",
-    date: "2024",
-    excerpt: "The FarmSmart app uses AI to help farmers identify weeds and manage crops more effectively.",
-    url: "#", // Add actual URL
-    tags: ["FarmMind", "Agriculture"],
-  },
-  {
-    id: "lsu-venture-challenge",
-    type: "article" as const,
-    title: "Pitch Perfectors: How LSU Louisiana Small Business Development Center Helped FarmSmart Win the Venture Challenge",
-    publication: "LSU",
-    date: "2024",
-    excerpt: "Behind the scenes of FarmSmart's journey to winning the J. Terrell Brown Venture Challenge.",
-    url: "#", // Add actual URL
-    tags: ["FarmMind", "Entrepreneurship"],
-  },
-  {
-    id: "business-report-1",
-    type: "article" as const,
-    title: "This LSU-born startup wants to build the next big thing in agriculture",
-    publication: "Baton Rouge Business Report",
-    date: "2024",
-    excerpt: "FarmMind aims to revolutionize how farmers access agricultural expertise through AI.",
-    url: "#", // Add actual URL
-    tags: ["FarmMind", "Startup"],
-  },
-  {
-    id: "business-report-2",
-    type: "article" as const,
-    title: "This Baton Rouge startup is bringing AI to the farm field",
-    publication: "Baton Rouge Business Report",
-    date: "2024",
-    excerpt: "How FarmMind is making artificial intelligence accessible to farmers.",
-    url: "#", // Add actual URL
-    tags: ["FarmMind", "AI", "Agriculture"],
-  },
-  {
-    id: "farm-bureau",
-    type: "article" as const,
-    title: "Meet Colin Raby: First to Create an Agricultural Consultant With AI",
-    publication: "Louisiana Farm Bureau News",
-    date: "2024",
-    excerpt: "Louisiana native develops innovative AI solution for agricultural consulting.",
-    url: "#", // Add actual URL
-    tags: ["FarmMind", "Agriculture"],
-  },
-  {
-    id: "reveille",
-    type: "article" as const,
-    title: "LSU students launch AI app to simplify agricultural research",
-    publication: "LSU Reveille",
-    date: "2024",
-    excerpt: "Student entrepreneurs create app that brings AI to agriculture.",
-    url: "#", // Add actual URL
-    tags: ["FarmMind", "LSU"],
-  },
-  {
-    id: "it-boltwise",
-    type: "article" as const,
-    title: "FarmMind: Ein vielversprechendes AgTech-Startup aus Louisiana",
-    publication: "IT Boltwise",
-    date: "2024",
-    excerpt: "German publication covers the promising AgTech startup from Louisiana.",
-    url: "#", // Add actual URL
-    tags: ["FarmMind", "International"],
   },
   {
     id: "future-in-focus",
@@ -260,18 +290,150 @@ export const newsItems = [
     publication: "Local News Live",
     date: "2024",
     excerpt: "Video interview about the role of Congressional AI Specialist and the future of AI policy.",
-    url: "#", // Add actual URL
+    url: "https://www.localnewslive.com/video/2024/10/26/future-focus-congressional-ai-specialist-colin-raby/",
     tags: ["AI Policy", "Congressional"],
   },
   {
-    id: "talk-radio",
-    type: "radio" as const,
-    title: "Mornings with Brian Haldane: Colin Raby and Grant Muslow",
-    publication: "Talk 107.3FM",
+    id: "bgov-ai-hill",
+    type: "article" as const,
+    title: "AI Tools Help Tech-Savvy Hill Aides Speed Tedious Work",
+    publication: "Bloomberg Government",
     date: "2024",
-    excerpt: "Radio interview discussing FarmMind and the intersection of AI and agriculture.",
-    url: "#", // Add actual URL
-    tags: ["FarmMind", "Interview"],
+    excerpt: "How AI is transforming work on Capitol Hill.",
+    url: "https://news.bgov.com/bloomberg-government-news/ai-catches-on-with-tech-savvy-hill-aides-to-speed-tedious-work",
+    tags: ["AI Policy", "Congressional"],
+  },
+  {
+    id: "fiu-panel",
+    type: "video" as const,
+    title: "FIU AI Unveiled: Exploring Its Impact on You - Panel Discussion",
+    publication: "Florida International University",
+    date: "2024",
+    excerpt: "Panel discussion exploring the impact of AI on society.",
+    url: "https://www.youtube.com/watch?v=ascodyf6OrE",
+    tags: ["AI Policy", "Speaking"],
+  },
+  {
+    id: "business-report",
+    type: "article" as const,
+    title: "This Baton Rouge startup is bringing AI to the farm field",
+    publication: "Baton Rouge Business Report",
+    date: "2024",
+    excerpt: "How FarmMind is making artificial intelligence accessible to farmers.",
+    url: "https://www.businessreport.com/business/this-baton-rouge-startup-is-bringing-ai-to-the-farm-field",
+    tags: ["FarmMind", "AI", "Agriculture"],
+  },
+  {
+    id: "business-report-spotlight",
+    type: "article" as const,
+    title: "AI: It's all in the prompt - Baton Rouge Business Report Spotlight",
+    publication: "Baton Rouge Business Report",
+    date: "2024",
+    excerpt: "Featured in the Business Report's AI Playbook issue.",
+    url: "https://issuu.com/batonrougebusinessreport/docs/the_ai_playbook",
+    tags: ["AI", "Feature"],
+  },
+  {
+    id: "fedscoop-hackathon",
+    type: "article" as const,
+    title: "Bill summary app among tools presented at Congressional Hackathon",
+    publication: "FedScoop",
+    date: "2024",
+    excerpt: "Tools presented at the Congressional Hackathon to improve legislative efficiency.",
+    url: "https://fedscoop.com/staff-directory-bill-summary-app-among-tools-presented-at-congressional-hackathon/",
+    tags: ["AI Policy", "Congressional"],
+  },
+  {
+    id: "aaea-recognition",
+    type: "article" as const,
+    title: "Over 50 Recognized at 2024 AAEA Annual Meeting in New Orleans, LA",
+    publication: "PRWeb",
+    date: "2024",
+    excerpt: "Recognition at the American Agricultural Economics Association annual meeting.",
+    url: "https://www.prweb.com/releases/over-50-recognized-at-2024-aaea-annual-meeting-in-new-orleans-la-302225535.html",
+    tags: ["Award", "Agriculture"],
+  },
+  // 2023
+  {
+    id: "reveille-ai-tool",
+    type: "article" as const,
+    title: "LSU students develop AI tool for herbicide application, part of wider AI agriculture rush",
+    publication: "LSU Reveille",
+    date: "2023",
+    excerpt: "Student entrepreneurs create app that brings AI to agriculture.",
+    url: "https://lsureveille.com/159478/uncategorized/lsu-students-develop-ai-tool-for-herbicide-application-part-of-wider-ai-agriculture-rush/",
+    tags: ["FarmMind", "LSU"],
+  },
+  {
+    id: "wafb-ai-classroom",
+    type: "video" as const,
+    title: "LSU incorporating AI into classroom; students showcase solutions in healthcare, farming and research",
+    publication: "WAFB",
+    date: "2023",
+    excerpt: "News coverage of LSU's AI initiatives and student projects.",
+    url: "https://www.wafb.com/video/2023/12/06/lsu-incorporating-ai-into-classroom-students-showcase-solutions-healthcare-farming-research/",
+    tags: ["FarmMind", "LSU", "AI"],
+  },
+  {
+    id: "aaea-trivia-win",
+    type: "article" as const,
+    title: "Add Another 'Ship to the Scholarship First Fleet! LSU Ag-Econ Trivia Team Wins National Competition",
+    publication: "LSU Agriculture",
+    date: "2023",
+    excerpt: "LSU team wins national AAEA Academic Bowl competition.",
+    url: "https://lsu.edu/agriculture/blog/2023-24/lsu-ag-econ-trivia-team-wins-national-competition.php",
+    tags: ["Award", "LSU"],
+  },
+  // Earlier years
+  {
+    id: "hurricane-relief",
+    type: "article" as const,
+    title: "Air Force service organization contributes to hurricane relief in Fort Myers, Florida",
+    publication: "LSU Reveille",
+    date: "2022",
+    excerpt: "Coverage of service organization's hurricane relief efforts.",
+    url: "https://lsureveille.com/156566/news/air-force-service-organization-contributes-to-hurricane-relief-in-fort-myers-florida/",
+    tags: ["Service", "LSU"],
+  },
+  {
+    id: "sg-transparency",
+    type: "article" as const,
+    title: "LSU SG takes steps towards transparency with new financial dashboard",
+    publication: "LSU Reveille",
+    date: "2022",
+    excerpt: "Student Government financial transparency initiatives.",
+    url: "https://lsureveille.com/159548/news/lsu-sg-takes-steps-towards-transparency-with-new-financial-dashboard/",
+    tags: ["LSU", "Leadership"],
+  },
+  {
+    id: "ai-opinion",
+    type: "article" as const,
+    title: "Letter to the editor: Artificial intelligence marks a new age for humanity",
+    publication: "LSU Reveille",
+    date: "2023",
+    excerpt: "Opinion piece on the transformative potential of AI.",
+    url: "https://lsureveille.com/159542/opinion/letter-to-the-editor-artificial-intelligence-marks-a-new-age-for-humanity/",
+    tags: ["AI", "Opinion"],
+  },
+  {
+    id: "ruck-march",
+    type: "article" as const,
+    title: "The Greatest Salute: LSU ME Freshman Marches 323 Miles for Veterans",
+    publication: "LSU Engineering",
+    date: "2020",
+    excerpt: "LSU freshman completes 323-mile ruck march to honor veterans.",
+    url: "https://www.lsu.edu/eng/news/2020/02/rabyruckmarch.php",
+    tags: ["Service", "LSU"],
+  },
+  {
+    id: "eagle-scout-resolution",
+    type: "article" as const,
+    title: "Louisiana House Resolution Commending Colin Raby as Louisiana Eagle Scout of the Year 2019",
+    publication: "Louisiana State Legislature",
+    date: "2019",
+    excerpt: "Official state recognition as Louisiana Eagle Scout of the Year.",
+    url: "https://www.legis.la.gov/Legis/ViewDocument.aspx?d=1141516",
+    tags: ["Award", "Eagle Scout"],
   },
 ];
 
@@ -308,14 +470,16 @@ export const skills = {
 };
 
 export const aboutContent = {
-  intro: "I'm Colin Raby, a Congressional AI Specialist for Rep. Raja Krishnamoorthi and CEO of FarmMind. I'm passionate about making AI accessible and impactful, whether that's shaping policy on Capitol Hill or helping farmers leverage cutting-edge technology.",
-  journey: "My path from LSU mechanical engineering student to AI policy and entrepreneurship has been driven by a simple belief: technology should solve real problems for real people. At LSU, I discovered my passion for innovation through the Honors College, competitive academic teams, and eventually founding FarmMind. Now in Washington, D.C., I'm working to ensure AI policy keeps pace with technological advancement while remaining grounded in practical benefits for Americans.",
-  personal: "When I'm not working on AI policy or FarmMind, you can find me cheering for the LSU Tigers, exploring D.C.'s food scene, or diving into the latest developments in tech and aerospace.",
+  intro: "I'm Colin Raby, CEO of FarmMind and former Congressional AI Specialist. I'm passionate about making AI accessible and impactful—from shaping policy on Capitol Hill to helping farmers leverage cutting-edge technology.",
+  journey: "My path from LSU mechanical engineering student to AI entrepreneurship has been driven by a simple belief: technology should solve real problems for real people. Through experiences at NASA, nuclear engineering, and as one of the nation's first Congressional AI Specialists, I've seen how AI can transform industries. Now as CEO of FarmMind, I'm applying that experience to revolutionize agriculture.",
+  personal: "When I'm not building FarmMind, you can find me cheering for the LSU Tigers, exploring new tech developments, or diving into the latest in aerospace and AI.",
   funFacts: [
     "2x National Champion in the AAEA Academic Bowl",
     "2x LSU Homecoming Court",
     "Tiger Twelve Recipient",
-    "First to create an AI agricultural consultant",
+    "Louisiana Eagle Scout of the Year",
     "One of the nation's first Congressional AI Specialists",
+    "NASA Systems Engineering Intern",
+    "2025 Pelican Cup Winner ($50K)",
   ],
 };

@@ -36,20 +36,52 @@ const itemVariants = {
 
 const experience = [
   {
+    title: "CEO & Co-Founder",
+    company: "FarmMind Inc.",
+    location: "Baton Rouge, LA",
+    period: "May 2025 - Present",
+    description:
+      "Leading an AI-powered agricultural consulting platform using agentic AI networks to make agricultural expertise accessible to farmers worldwide. Secured recognition as Top-10 Semi-Finalist in American Farm Bureau 2026 Ag Innovation Challenge, winner of 2025 Pelican Cup ($50K), Nexus 2025 Technology Cup ($25K), and J. Terrell Brown Venture Challenge ($20K).",
+  },
+  {
     title: "Congressional AI Specialist",
     company: "Office of Rep. Raja Krishnamoorthi",
     location: "Washington, D.C.",
-    period: "2024 - Present",
+    period: "May 2024 - May 2025",
     description:
-      "One of the nation's first Congressional AI Specialists. Working with House Committees including Select Committee on CCP, Space Science and Technology, and Energy and Commerce to develop AI policy and improve congressional efficiency.",
+      "One of the nation's first Congressional AI Specialists. Built AI-enabled solutions for House Committees (Select Committee on CCP, Space Science and Technology, Energy and Commerce). Drafted technical briefs and memos on generative AI including LLMs and foundation models. Educated congressional staff on AI principles and facilitated discussions on AI policy.",
   },
   {
-    title: "CEO & Co-Founder",
-    company: "FarmMind",
-    location: "Baton Rouge, LA / Remote",
-    period: "2023 - Present",
+    title: "Teaching Assistant",
+    company: "LSU Honors 3025: Applied LLM Systems",
+    location: "Baton Rouge, LA",
+    period: "Jan 2024 - May 2024",
     description:
-      "Leading an AI-powered agricultural consulting platform that uses agentic AI networks to make agricultural expertise accessible to farmers worldwide.",
+      "Teaching assistant for LSU's inaugural large language model class, guiding students through an entire LLM stack including agents, fine-tuning, and Retrieval-Augmented Generation (RAG).",
+  },
+  {
+    title: "Intern, Nuclear Services Group",
+    company: "Enercon",
+    location: "Baton Rouge, LA",
+    period: "May 2023 - Aug 2023",
+    description:
+      "Performed digital I&C upgrades and control system replacement projects for nuclear power plants. Designed and executed control logic and conducted equipment verification, factory acceptance testing, and site acceptance testing.",
+  },
+  {
+    title: "Intern, Systems Engineering & Project Management",
+    company: "NASA Marshall Space Flight Center",
+    location: "Huntsville, AL",
+    period: "May 2022 - Aug 2022",
+    description:
+      "Conducted Systems Engineering and Project Management for NASA's MSFC Nuclear Propulsion Program. Supported RFP technical evaluation in the Space Launch System (SLS) Program Office.",
+  },
+  {
+    title: "Louisiana Governor's Fellow",
+    company: "Office of Governor John Bel Edwards",
+    location: "Baton Rouge, LA",
+    period: "May 2021 - Aug 2021",
+    description:
+      "Represented Louisiana as a Governor's Fellow, working on state-level initiatives and policy. Selected as one of a small cohort of outstanding Louisiana college students.",
   },
 ];
 
@@ -58,7 +90,7 @@ const education = [
     degree: "B.S. Mechanical Engineering",
     school: "Louisiana State University",
     location: "Baton Rouge, LA",
-    period: "2020 - 2024",
+    period: "2019 - 2024",
     details: [
       "Minors: Aerospace Engineering, Economics",
       "LSU Honors College Graduate",
@@ -68,11 +100,15 @@ const education = [
 ];
 
 const awards = [
+  "2025 Pelican Cup Winner - $50,000 (2025)",
+  "Nexus 2025 Technology Cup Winner - $25,000 (2025)",
+  "American Farm Bureau Ag Innovation Challenge Top-10 Semi-Finalist (2025)",
+  "J. Terrell Brown Venture Challenge Winner - $20,000 (2024)",
   "Tiger Twelve Recipient (2021)",
   "2x LSU Homecoming Court (2022, 2023)",
   "2x AAEA Academic Bowl National Champion (2022, 2023)",
-  "J. Terrell Brown Venture Challenge Winner (2024)",
-  "American Farm Bureau Ag Innovation Challenge Top-10 Semi-Finalist (2025)",
+  "Louisiana Eagle Scout of the Year (2019)",
+  "Order of the Arrow Vigil Honor",
 ];
 
 export function Resume() {
